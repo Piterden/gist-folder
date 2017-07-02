@@ -1,15 +1,15 @@
 #!/bin/bash
 # Database credentials
 
-user="balibikerental"
-password="balibikerental"
+user="pyrocms"
+password="pyrocms"
 host="localhost"
-db_name="BaliBikeRentalDb"
+db_name="pyrocms"
 
 # Other options
 
-backup_path="/home/den/dumps"
-date=$(date +"%d-%b-%Y")
+backup_path="$HOME/dumps"
+backup_date=$(date +"%d-%b-%Y")
 
 # Set default file permissions
 
@@ -17,4 +17,8 @@ umask 177
 
 # Dump database into SQL file
 
-mysqldump --user=$user --password=$password --host=$host $db_name > $backup_path/$db_name-$date.sql
+mysqldump \
+    --user=$user \
+    --password=$password \
+    --host=$host \
+    $db_name > $backup_path/$db_name-$backup_date.sql

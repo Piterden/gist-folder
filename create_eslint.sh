@@ -9,7 +9,7 @@ env:
   browser: true
 parserOptions:
   ecmaVersion: 6
-  allowImportExportEverywhere: false\
+  allowImportExportEverywhere: false
 globals:
   $: true
   window: true
